@@ -94,11 +94,12 @@ const Work = buildCollection<TWork>({
             validation: { required: true },
             dataType: 'string',
           },
-          value: {
-            name: 'value',
+          val: {
+            name: 'val',
             description: '',
             validation: { required: true },
             dataType: 'string',
+            markdown: true,
           },
         },
       }),
