@@ -28,7 +28,7 @@ const News = buildCollection<TNews>({
       dataType: 'string',
     },
     content: {
-      name: '기관',
+      name: '내용',
       description: '',
       validation: { required: true },
       dataType: 'string',
