@@ -33,7 +33,7 @@ const Members = buildCollection<TMembers>({
     create: true,
     delete: true,
   }),
-  customId: true,
+  customId: false,
   properties: {
     bgImagePath: buildProperty({
       name: '배경이미지',
