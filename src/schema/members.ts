@@ -183,18 +183,6 @@ const Members = buildCollection<TMembers>({
         },
       }),
     },
-    imagePath: buildProperty({
-      name: '프로필이미지',
-      dataType: 'string',
-      description: '',
-      storage: {
-        storagePath: 'members',
-        acceptedFiles: ['members/*'],
-        metadata: {
-          cacheControl: 'max-age=1000000',
-        },
-      },
-    }),
     language: {
       name: '언어',
       description: '',

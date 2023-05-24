@@ -19,7 +19,7 @@ const News = buildCollection<TNews>({
     create: true,
     delete: true,
   }),
-  customId: true,
+  customId: false,
   properties: {
     title: {
       name: '제목',
@@ -77,6 +77,20 @@ const News = buildCollection<TNews>({
       validation: { required: true },
       dataType: 'string',
       markdown: true,
+    },
+    order: {
+      name: '순서',
+      description: '',
+      validation: { required: true },
+      dataType: 'number',
+    },
+    memberId: {
+      name: '멤버아이디',
+      description: '',
+      path: 'members',
+      previewProperties: ['id'],
+      validation: { required: true },
+      dataType: 'reference',
     },
   },
 });
