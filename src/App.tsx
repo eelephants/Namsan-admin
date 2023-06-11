@@ -81,11 +81,11 @@ export default function App() {
               `https://console.firebase.google.com/project/${cms.firebaseApp.options.projectId}/firestore/data/${entity.path}/${entity.id}`
             }
           >
-            {({ loading }: { loading: boolean }) => {
+            {(props: any) => {
               let component;
-              if (loading) {
+              if (props.loading) {
                 component = <CircularProgressCenter />;
-              } else if (!cms.canAccessMainView) {
+              } else if (!props.context.authController.user) {
                 component = (
                   <FirebaseLoginView
                     allowSkipLogin={false}
